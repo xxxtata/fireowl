@@ -47,8 +47,23 @@ for line in all_lines:
     elif line.startswith("vless://"):
         try:
             base = line.split("#")[0]
-            new_name = f"{PREFIX_NAME}-{counter}"
-            output.append(base + "#" + new_name)
+            output.append(base + "#" + f"{PREFIX_NAME}-{counter}")
+            counter += 1
+        except:
+            continue
+
+    elif line.startswith("ss://"):
+        try:
+            base = line.split("#")[0]
+            output.append(base + "#" + f"{PREFIX_NAME}-{counter}")
+            counter += 1
+        except:
+            continue
+
+    elif line.startswith("trojan://"):
+        try:
+            base = line.split("#")[0]
+            output.append(base + "#" + f"{PREFIX_NAME}-{counter}")
             counter += 1
         except:
             continue
@@ -59,4 +74,5 @@ for line in all_lines:
 
 with open(OUTPUT_FILE, "w") as f:
     f.write("\n".join(output))
+
 
