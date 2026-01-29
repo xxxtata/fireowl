@@ -1,6 +1,7 @@
 import requests
 import base64
 import json
+PREFIX_NAME = "FIREOWL"   # ← اسم دلخواه تو اینجاست
 
 SOURCE_URLS = [
     "https://raw.githubusercontent.com/V2RAYCONFIGSPOOL/V2RAY_SUB/refs/heads/main/v2ray_configs_no1.txt",
@@ -42,8 +43,20 @@ for line in all_lines:
             counter += 1
         except:
             continue
+
+    elif line.startswith("vless://"):
+        try:
+            base = line.split("#")[0]
+            new_name = f"{PREFIX_NAME}-{counter}"
+            output.append(base + "#" + new_name)
+            counter += 1
+        except:
+            continue
+
     else:
         output.append(line)
 
+
 with open(OUTPUT_FILE, "w") as f:
     f.write("\n".join(output))
+
