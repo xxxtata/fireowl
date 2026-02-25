@@ -4,15 +4,7 @@ import json
 PREFIX_NAME = "FIREOWL"   # ← اسم دلخواه تو اینجاست
 
 SOURCE_URLS = [
-    "https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/v2ray/batch_001.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_33_59.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_31_52.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_30_09.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_26_27.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_17_58.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_13_56.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_08_15.txt",
-    "https://github.com/V2RAYCONFIGSPOOL/V2RAY_SUB/blob/main/v2ray_configs_2026-02-24_20_01_41.txt"
+    "https://github.com/Delta-Kronecker/V2ray-Config/raw/refs/heads/main/config/batches/v2ray/batch_001.txt"
 ]
 
 OUTPUT_FILE = "sub.txt"
@@ -73,6 +65,7 @@ for line in all_lines:
 
 with open(OUTPUT_FILE, "w") as f:
     f.write("\n".join(output))
+
 
 
 
